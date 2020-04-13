@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background:#202020;
+    font-family: 'Merriweather', serif;
+    header{
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid #333;
+        background:rgba(0,0,0,0.1);
+        padding:10px 0;
+        img{
+            max-width:50px;
+        }
+    }
+}

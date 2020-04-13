@@ -1,0 +1,135 @@
+
+.gameZone {
+	display: grid;
+	grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+	width: 300px;
+	height: 300px;
+	margin: 0 auto;
+	color: #fff;
+}
+  
+.score {
+	margin-top: 30px;
+	text-align: center;
+	h3 {
+		font-size: 1.2rem;
+		margin-bottom: 20px;
+	}
+
+	span {
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
+}
+.box{
+	margin: 3px;
+	font-family: Helvetica;
+	font-weight: bold;
+	font-size: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Font Awesome 5 Free";
+	background-color: #333;
+	cursor: pointer;
+	transition: background-color 0.2s;
+
+  
+	&.computer {
+	  	cursor: not-allowed;
+	}
+  
+	&.croix {
+	  background-color: #202020;
+	 
+		&.croix::after {
+			content: "X";
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+		}
+	}
+  
+	&.rond {
+		background-color: #feb960;
+	
+		&.rond::after {
+			font-weight: 400;
+			content: "O";
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+		}
+	}
+}
+
+.resultModal {
+	text-align: center;
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+  
+.result {
+	background-color: #202020;
+	margin: 15% auto; /* 15% from the top and centered */
+	padding: 20px;
+	border: 1px solid #feb960;;
+	width: 300px;
+  
+	h3 {
+		color:#feb960;
+		font-size: 18px;
+		margin-top:-10px;
+	}
+  
+	hr {
+		width: 100%;
+		border: 1px solid #feb960;
+		margin: 0 auto 10px auto;
+	}
+  
+	p {
+		color:#fff;
+		font-weight: 400;
+		font-size: 18px;
+	}
+
+	.btn{
+		position:relative;
+		display:inline-flex;
+		align-items:center;
+		font-size:16px;
+		color:#fff;
+		background:#feb960;
+		padding:0;
+		border-radius:none;
+		border:none;
+		padding:10px 20px;
+		cursor:pointer;
+	}
+  
+	img {
+	  	margin-bottom: 20px; 
+	}
+}
+  
+h2 {
+	position:relative;
+	color:#feb960;
+	text-align: center;
+	margin: 20px;
+	padding-bottom:20px;
+	&:after{
+		content:"";
+		position:absolute;
+		display:block;
+		top:100%;
+		left:50%;
+		width:300px;
+		margin-left:-150px;
+		border-bottom:1px solid #feb960;
+	}
+}

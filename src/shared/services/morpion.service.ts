@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Square } from '../models/Square'
-import { Player } from '../models/Player'
+import { Square } from '../models/square.class'
+import { Player } from '../models/player.class'
 
 @Injectable({
   providedIn: 'root'
